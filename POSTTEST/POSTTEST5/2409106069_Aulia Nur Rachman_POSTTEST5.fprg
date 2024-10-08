@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106069_Aulia Nur Rachman_POSTTEST5"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-08 07:16:08 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtNVFBOEZMM007MjAyNC0xMC0wODswNjo1MDoxNiBQTTsyNjMz"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtNVFBOEZMM007MjAyNC0xMC0wODswNzoxNjowOCBQTTsxOzI3NDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;USER&quot; &amp; ToChar(13) &amp; &quot;ADMIN&quot; &amp; ToChar(13) &amp; &quot;keluar&quot;" newline="True"/>
+            <input variable="pilihan"/>
+            <while expression="True">
+                <if expression="USER">
+                    <then>
+                        <output expression="&quot;list hp terbaik di tahun 2024&quot;" newline="True"/>
+                        <assign variable="xiaomi" expression="(&quot;Xiaomi 14&quot;, &quot;Xiaomi 13T&quot;, &quot;Xiaomi Redmi Note 13 Pro+ 5G&quot;)"/>
+                        <assign variable="Samsung" expression="(&quot;Samsung S24 Ultra&quot;, &quot;Samsung Galaxy Fold 5&quot;, &quot;Samsung Galaxy Flip 5&quot;)"/>
+                        <assign variable="vivo" expression="(&quot;Vivo X100 Pro&quot;, &quot;Vivo X Fold-3&quot;, &quot;iQoo Z9 5G&quot;)"/>
+                        <if expression="xiaomi">
+                            <then>
+                                <output expression="(&quot;Xiaomi 14&quot;, &quot;Xiaomi 13T&quot;, &quot;Xiaomi Redmi Note 13 Pro+ 5G&quot;)" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="samsung">
+                                    <then>
+                                        <output expression="(&quot;Samsung S24 Ultra&quot;, &quot;Samsung Galaxy Fold 5&quot;, &quot;Samsung Galaxy Flip 5&quot;)" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="vivo">
+                                            <then>
+                                                <output expression="(&quot;Vivo X100 Pro&quot;, &quot;Vivo X Fold-3&quot;, &quot;iQoo Z9 5G&quot;)" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;keluar sistem&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="ADMIN">
+                            <then>
+                                <output expression="&quot;program admin&quot;" newline="True"/>
+                                <if expression="tambah list">
+                                    <then>
+                                        <input variable="tambahxiaomi"/>
+                                        <assign variable="tambahxiaomi" expression="menambahkan ke list xiaomi"/>
+                                        <input variable="tambahsamsung"/>
+                                        <assign variable="tambahsamsung" expression="menambahkan ke list samsung"/>
+                                        <input variable="tambahvivo"/>
+                                        <assign variable="tambahvivo" expression="menambahkan ke list vivo"/>
+                                    </then>
+                                    <else>
+                                        <if expression="edit list">
+                                            <then>
+                                                <input variable="editxiaomi"/>
+                                                <assign variable="editxiaomi" expression="mengedit salah satu yang ada di list xiaomi"/>
+                                                <input variable="editsamsung"/>
+                                                <assign variable="editsamsung" expression="mengedit salah satu yang ada di list samsung"/>
+                                                <input variable="editvivo"/>
+                                                <assign variable="editvivo" expression="mengedit salah satu yang ada di list vivo"/>
+                                            </then>
+                                            <else>
+                                                <if expression="hapus list">
+                                                    <then>
+                                                        <input variable="hapusxiaomi"/>
+                                                        <assign variable="hapusxiaomi" expression="menghapus salah satu yang ada di list xiaomi"/>
+                                                        <input variable="hapussamsung"/>
+                                                        <assign variable="hapussamsung" expression="menghapus salah satu yang ada di list samsung"/>
+                                                        <input variable="hapusvivo"/>
+                                                        <assign variable="hapusvivo" expression="menghapus salah satu yang ada di list vivo"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;keluar sistem&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <output expression="&quot;keluar sistem&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
