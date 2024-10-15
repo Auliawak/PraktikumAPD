@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106069_Aulia Nur Rachman_POSTTEST5"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-15 03:51:45 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtNVFBOEZMM007MjAyNC0xMC0wODswNjo1MDoxNiBQTTsyNjMz"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtNVFBOEZMM007MjAyNC0xMC0xNTswMzo1MTo0NSBQTTsyOzI3NDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;USER&quot; &amp; ToChar(13) &amp; &quot;ADMIN&quot; &amp; ToChar(13) &amp; &quot;keluar&quot;" newline="True"/>
+            <input variable="pilihan"/>
+            <while expression="True">
+                <if expression="USER">
+                    <then>
+                        <output expression="&quot;hp terbaik di tahun 2024&quot;" newline="True"/>
+                        <assign variable="xiaomi" expression="&quot;Xiaomi 14&quot;"/>
+                        <assign variable="Samsung" expression="&quot;Samsung S24 Ultra&quot;"/>
+                        <assign variable="vivo" expression="&quot;Vivo X100 Pro&quot;"/>
+                        <if expression="xiaomi">
+                            <then>
+                                <output expression="&quot;Xiaomi 14&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="samsung">
+                                    <then>
+                                        <output expression="&quot;Samsung S24 Ultra&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="vivo">
+                                            <then>
+                                                <output expression="&quot;Vivo X100 Pro&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;keluar sistem&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="ADMIN">
+                            <then>
+                                <input variable="Masukkan username"/>
+                                <input variable="masukkan password"/>
+                                <output expression="&quot;program admin&quot;" newline="True"/>
+                                <if expression="tambah">
+                                    <then>
+                                        <input variable="tambah merk"/>
+                                        <assign variable="tambah merk" expression="menambahkan merk hp"/>
+                                        <input variable="tambah series/jenis"/>
+                                        <assign variable="tambah series/jenis" expression="menambahkan series/jenis hp yang terbaik"/>
+                                    </then>
+                                    <else>
+                                        <if expression="edit">
+                                            <then>
+                                                <input variable="pilihmerk"/>
+                                                <assign variable="pilih merk" expression="memilih salah satu merk untuk di edit"/>
+                                                <input variable="editseries"/>
+                                                <assign variable="editseries" expression="mengganti series yang lebih baik"/>
+                                            </then>
+                                            <else>
+                                                <if expression="hapus">
+                                                    <then>
+                                                        <input variable="hapusHP"/>
+                                                        <assign variable="hapusHP" expression="menghapus salah satu HP"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;keluar sistem&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <output expression="&quot;keluar sistem&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
