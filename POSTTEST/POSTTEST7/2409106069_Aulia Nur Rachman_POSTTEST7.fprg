@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106069_Aulia Nur Rachman_POSTTEST7"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-22 07:14:32 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtNVFBOEZMM007MjAyNC0xMC0yMjswNjoyNTo0NiBQTTsyNjM0"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtNVFBOEZMM007MjAyNC0xMC0yMjswNzoxNDozMiBQTTsxOzI3MzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;[1] Admin&quot;&amp;ToChar(13)&amp;&quot;[2] User&quot;&amp;ToChar(13)&amp;&quot;[3] Keluar&quot;" newline="True"/>
+            <input variable="pilihan"/>
+            <if expression="pilihan == 1">
+                <then>
+                    <call expression="programadmin"/>
+                </then>
+                <else>
+                    <if expression="pilihan == 2">
+                        <then>
+                            <call expression="programuser"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Anda meninggalkan sistem&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="edithp" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Merk Hp apa yang ingin diganti&quot;" newline="True"/>
+            <input variable="gantihp"/>
+            <output expression="&quot;Mau ganti jadi series/jenis apa&quot;" newline="True"/>
+            <input variable="gantijenis"/>
+            <output expression="&quot;jenis pada hp &quot;&amp;gantihp&amp;&quot; diubah menjadi &quot;&amp;gantijenis" newline="True"/>
+        </body>
+    </function>
+    <function name="hapushp" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Masukkan nama hp yang ingin dihapus&quot;" newline="True"/>
+            <input variable="hapushp"/>
+            <if expression="hapushp in merkhp">
+                <then>
+                    <output expression="hapushp&amp;&quot;telah dihapus&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="hapushp&amp;&quot;Tidak ditemukan&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="liathp" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="listhp"/>
+        </body>
+    </function>
+    <function name="listhp" type="None" variable="">
+        <parameters/>
+        <body>
+            <assign variable="merk1" expression="xiaomi"/>
+            <assign variable="merk2" expression="samsung"/>
+            <assign variable="merk3" expression="vivo"/>
+            <assign variable="jenis1" expression="&quot;xiaomi 14&quot;"/>
+            <assign variable="jenis2" expression="&quot;Samsung S24 Ultra&quot;"/>
+            <assign variable="jenis3" expression="&quot;Vivo X100 Pro&quot;"/>
+            <output expression="merk1&amp;&quot;:&quot;&amp;jenis1&amp;ToChar(13)&amp;&#13;&#10;merk2&amp;&quot;:&quot;&amp;jenis2&amp;ToChar(13)&amp;&#13;&#10;merk3&amp;&quot;:&quot;&amp;jenis3" newline="True"/>
+        </body>
+    </function>
+    <function name="programadmin" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="validasilogin"/>
+            <output expression="&quot;[1] Tambah list&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;[2] Edit list&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;[3] Hapus list&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;[4] Liat list&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;[5] Keluar&quot;" newline="True"/>
+            <input variable="pilihan"/>
+            <if expression="pilihan == 1">
+                <then>
+                    <call expression="tambahhp"/>
+                </then>
+                <else>
+                    <if expression="pilihan == 2">
+                        <then>
+                            <call expression="edithp&#13;&#10;"/>
+                        </then>
+                        <else>
+                            <if expression="pilihan == 3">
+                                <then>
+                                    <call expression="hapushp"/>
+                                </then>
+                                <else>
+                                    <if expression="pilihan == 4">
+                                        <then>
+                                            <call expression="liathp"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Anda meninggalkan sistem&quot;" newline="True"/>
+                                            <breakpoint expression="" always="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="programuser" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;[1] Melihat merk dan jenis HP terbaik 2024&quot;&amp;ToChar(13)&amp;&quot;[2] Keluar&quot;" newline="True"/>
+            <input variable="pilih"/>
+            <if expression="pilih == 1">
+                <then>
+                    <call expression="listhp"/>
+                </then>
+                <else>
+                    <output expression="&quot;Anda meninggalkan sistem&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="tambahhp" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Merk Hp apa yang ingin dimasukkan&quot;" newline="True"/>
+            <input variable="tambahhp"/>
+            <output expression="&quot;Apa series/jenisnya&quot;" newline="True"/>
+            <input variable="tambahjenis"/>
+            <output expression="tambahhp&amp;&quot;ditambahkkan dengan jenis&quot;&amp;tambahjenis" newline="True"/>
+        </body>
+    </function>
+    <function name="validasilogin" type="None" variable="">
+        <parameters>
+            <parameter name="username" type="Integer" array="False"/>
+            <parameter name="password" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Masukkan username&quot;" newline="True"/>
+            <input variable="usn"/>
+            <output expression="&quot;Masukkan password&quot;" newline="True"/>
+            <input variable="pw"/>
+            <assign variable="username" expression="admin"/>
+            <assign variable="password" expression="admin123"/>
+            <if expression="username == usn and password == pw">
+                <then/>
+                <else>
+                    <assign variable="salah" expression="3"/>
+                    <while expression="salah &gt; 1">
+                        <output expression="&quot;Username atau password anda tidak cocok&quot;" newline="True"/>
+                        <assign variable="salah" expression="salah - 1"/>
+                    </while>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
